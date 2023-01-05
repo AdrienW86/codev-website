@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 
 import {data} from './api/data.js'
 import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
 
@@ -12,12 +13,14 @@ export default function Home() {
       <Head>
         <title> Notre catalogue </title>
         <meta name="description" content="codev, créateur de sites web" />
-        <link rel="icon" href="/favicon.ico" />
+       
       </Head>
+       <Navbar/>
+     
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Jetez un oeil à nos <a href="https://nextjs.org">templates</a>
+          Nos <a href="https://nextjs.org">templates</a>
         </h1>
 
         <div className={styles.grid}>
@@ -26,7 +29,7 @@ export default function Home() {
           })}         
         </div>
       </main>
-      <Footer/> 
+     
     </div>
   )
 }

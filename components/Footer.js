@@ -1,5 +1,7 @@
 import React from 'react';
-
+import Link from 'next/link'
+import Image from 'next/image'
+import Codev from '../assets/codev-logo.gif'
 import styles from '../styles/Home.module.css'
 
  const Footer = () => {
@@ -10,7 +12,16 @@ import styles from '../styles/Home.module.css'
       target="_blank"
       rel="noopener noreferrer"
     >
-      @Codev
+      <li className={styles.navlink}>
+            <Link href="https://code-v.fr">
+             <Image
+                className={styles.logo} 
+                src={Codev}
+                height= {300}
+                width={300}
+              />
+            </Link> 
+        </li>
      
     </a>
   </footer>
