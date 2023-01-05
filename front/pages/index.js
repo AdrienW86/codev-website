@@ -1,16 +1,11 @@
 import Head from 'next/head'
 import Card from '../components/Card'
+import Footer from '../components/Footer'
 
 import {data} from './api/data.js'
-
 import styles from '../styles/Home.module.css'
 
-
-
 export default function Home() {
-
-console.table(data)
-
 
   return (
     <div className={styles.container}>
@@ -31,16 +26,7 @@ console.table(data)
           })}         
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://code-v.fr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @Codev
-         
-        </a>
-      </footer>
+      <Footer/> 
     </div>
   )
 }

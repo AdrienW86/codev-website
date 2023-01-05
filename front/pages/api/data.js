@@ -1,5 +1,5 @@
-import template1 from '../../public/assets/template1.png'
-import template2 from '../../public/assets/template2.jpg'
+import template1 from '../../assets/template1.png'
+import template2 from '../../assets/template2.jpg'
 
 export const data = [
     {
