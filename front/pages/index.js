@@ -1,15 +1,21 @@
 import Head from 'next/head'
 import Card from '../components/Card'
 
+import {data} from './api/data.js'
+
 import styles from '../styles/Home.module.css'
-import Image from 'next/image'
-import template1 from '../public/assets/template1.png'
+
+
 
 export default function Home() {
+
+console.table(data)
+
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title> Notre catalogue </title>
         <meta name="description" content="codev, créateur de sites web" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -20,39 +26,19 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-            <Card
-              title = "Services"
-              url = "https://template1.codev.website"
-              template = {template1}
-            />
-             <Card
-              title = "E-commerce"
-              url = "https://template2.codev.website"
-              template = {template1}
-            />
-             <Card
-              title = "Restauration"
-              url = "https://template1.codev.website"
-              template = {template1}
-            />
-             <Card
-              title = "Cosmétique"
-              url = "https://template1.codev.website"
-              template = {template1}
-            />         
+          {data.map((el, index) => {
+            return <Card key = {index} title = {el.title} url = {el.url} template = {el.cover}/>
+          })}         
         </div>
       </main>
-
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://code-v.fr"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          @Codev
+         
         </a>
       </footer>
     </div>
